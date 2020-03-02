@@ -1,28 +1,36 @@
+# INTRODUCTION TO ORM's IN PYTHON 
+
+	1. SQLAlchemy is more full-featured and powerful (uses the DataMapper pattern).
+	2. Django ORM has a cleaner syntax and is easier to write for (ActiveRecord pattern).
+	3. If you're looking for lightweight and are already familiar with django-style declarative models, check out peewee:
 
 
-SQLAlchemy is more full-featured and powerful (uses the DataMapper pattern). Django ORM has a cleaner syntax and is easier to write for (ActiveRecord pattern). I don't know about performance differences.
-
-If you're looking for lightweight and are already familiar with django-style declarative models, check out peewee:
-
- Django is a full-stack web framework for Python, whereas Flask is a lightweight and extensible Python web framework. Django is developed based on batteries-included approach. It enables programmers to accomplish common web development tasks without using third-party tools and libraries. Django lacks some of the robust features provided by Python.
+ Django is a full-stack web framework for Python, whereas Flask is a lightweight and extensible Python web framework.
+ Django is developed based on batteries-included approach. It enables programmers to accomplish common web development tasks without using third-party tools and libraries. Django lacks some of the robust features provided by Python.
  
+ 
+# FOR CREATING VIRTUAL ENVIRONMENT IN PYTHON
  
 pip install virtualenvwrapper-win
 mkvirtualenv testdjango
 
-# using virtual environment
+# USING VIRTUAL ENVIRONMENT
 workon testdjango
+
 
 pip install django
 
+# CREATING PROJECTS WHICH CONTAIN MULTIPLE APPS
 
 (testdjango) C:\Users\kaush\Documents\New folder\New folder\DjangoProject>django-admin startproject djangoWebProject
-# start app
+
+# START APP
 python manage.py startapp accounts
 
 
 Django -- lightweight server
 
+# START SERVER
 python manage.py runserver
 
 
@@ -30,25 +38,25 @@ dummy project -- calc
 
 python manage.py travello
 
-python 
-manage.py collectstatic
+python manage.py collectstatic
 
 
-postgre 
+# POSTGRE 
 username :: postgres
 PASSWORD : root	
 port:5432
 pip install psycopg2  
 
 
-for model migrations:
+#FOR MODEL MIGRATIONS:
+
 python manage.py makemigrations  
 python manage.py sqlmigrate travello 0001 # to check the sql query
 python manage.py migrate
 
 
-REMIGRATION 
+# REMIGRATION 
 python manage.py makemigrations  
 python manage.py migrate
 
-CREATING A SUPER USER :
+# CREATING A SUPER USER :
