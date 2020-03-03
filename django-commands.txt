@@ -33,15 +33,27 @@ Django -- lightweight server
 # START SERVER
 python manage.py runserver
 
-
-dummy project -- calc
-
+# CREATE APP
 python manage.py travello
 
 python manage.py collectstatic
 
+Collect static files from multiple apps into a single path
+Well, a single Django project may use several apps, so while there you only have one myapp, it may actually be myapp1, myapp2, etc
+
+By copying them from inside the individual apps into a single folder, you can point your frontend web server (e.g. nginx) to that single folder STATIC_ROOT and serve static files from a single location, rather than configure your web server to serve static files from multiple paths.
+
+more about static files  --- https://docs.djangoproject.com/en/3.0/ref/contrib/staticfiles/
+
 
 # POSTGRE 
+
+'''
+
+We used the pgadmin which provides the UI to check changes in DB. same as xampp for MySQL .
+
+'''
+
 username :: postgres
 PASSWORD : root	
 port:5432
@@ -60,3 +72,4 @@ python manage.py makemigrations
 python manage.py migrate
 
 # CREATING A SUPER USER :
+python manage.py createsuperuser
