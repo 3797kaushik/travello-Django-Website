@@ -94,7 +94,7 @@ from the admin page we can create the data to store in the DB.
 
 # Creation of Registration page
 
-1) For this we have created the accounts app.
+1) For this we have created the accounts app & register.html page were we send through the post method .
 
 2) We are using the post method  for allowing the user to register.
 We use 
@@ -117,9 +117,17 @@ and User.objects.filter(email = email).exists() if email is already taken
 
 # login and logout of page
 
+1) for login we used login page where we login the user using auth module
+
+            auth.login(request,user)
+2) for logout we use below method
+
+    auth.logout(request)
 
 
+# {% csrf_token %} usage 
 
+The CSRF middleware and template tag provides easy-to-use protection against Cross Site Request Forgeries. This type of attack occurs when a malicious website contains a link, a form button or some JavaScript that is intended to perform some action on your website, using the credentials of a logged-in user who visits the malicious site in their browser. A related type of attack, ‘login CSRF’, where an attacking site tricks a user’s browser into logging into a site with someone else’s credentials, is also covered.
 
 
  
